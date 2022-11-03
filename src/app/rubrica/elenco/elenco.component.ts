@@ -10,6 +10,7 @@ export class ElencoComponent implements OnInit {
 
   @Input() contactList?: Contact[];
   @Output() deleteContact = new EventEmitter();
+  @Output() detailContact = new EventEmitter();
 
   constructor() { }
 
@@ -17,6 +18,9 @@ export class ElencoComponent implements OnInit {
   }
   removeContact(contact: Contact): void {
     this.deleteContact.emit(contact);
+  }
+  infoContact(contact: Contact): void {
+    this.detailContact.emit(contact);
   }
 
 }

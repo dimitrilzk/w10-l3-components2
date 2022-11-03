@@ -5,10 +5,11 @@
       <app-elenco
         [contactList]="listaContatti"
         (deleteContact)="onRemoveContact($event)"
+        (detailContact)="onInfoContact($event)"
       ></app-elenco>
     </div>
-    <div class="col">
-      <app-dettagli></app-dettagli>
+    <div class="col" *ngIf="infoContact">
+      <app-dettagli [contact]="infoContact"></app-dettagli>
     </div>
   </div>
 </div>

@@ -7,6 +7,8 @@ import { Contact } from '../classes/contact';
 })
 export class RubricaPage implements OnInit {
 
+  infoContact?: Contact;
+
   listaContatti: Contact[] = [{
     nome: 'Edoardo',
     cognome: 'Rossi',
@@ -26,6 +28,9 @@ export class RubricaPage implements OnInit {
   onCreateContact(contact: Contact) {
     this.listaContatti.push(contact);
 
+  }
+  onInfoContact(contact: Contact) {
+    this.infoContact = contact;
   }
 
 }
