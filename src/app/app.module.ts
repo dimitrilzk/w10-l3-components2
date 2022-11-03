@@ -9,6 +9,7 @@ import { RubricaPage } from './rubrica/rubrica.page';
 import { FormComponent } from './rubrica/form/form.component';
 import { ElencoComponent } from './rubrica/elenco/elenco.component';
 import { DettagliComponent } from './rubrica/dettagli/dettagli.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DettagliComponent } from './rubrica/dettagli/dettagli.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

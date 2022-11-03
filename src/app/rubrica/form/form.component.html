@@ -1,18 +1,42 @@
 <div class="row g-3 my-5">
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Nome" />
+    <input
+      type="text"
+      [(ngModel)]="newContact.nome"
+      class="form-control"
+      placeholder="Nome"
+    />
   </div>
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Cognome" />
+    <input
+      type="text"
+      [(ngModel)]="newContact.cognome"
+      class="form-control"
+      placeholder="Cognome"
+    />
   </div>
   <div class="col-sm">
-    <input type="phone" class="form-control" placeholder="Cellulare" />
+    <input
+      type="phone"
+      [(ngModel)]="newContact.cellulare"
+      class="form-control"
+      placeholder="Cellulare"
+    />
   </div>
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Citta" />
+    <input
+      type="text"
+      [(ngModel)]="newContact.citta"
+      class="form-control"
+      placeholder="Citta"
+    />
   </div>
   <div class="col-sm">
-    <button type="button" class="btn btn-dark form-control">
+    <button
+      type="button"
+      class="btn btn-dark form-control"
+      (click)="createContact()"
+    >
       Aggiungi a Rubrica
     </button>
   </div>

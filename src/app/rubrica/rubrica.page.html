@@ -1,8 +1,11 @@
 <div class="container">
-  <app-form></app-form>
+  <app-form (addContact)="onCreateContact($event)"></app-form>
   <div class="row">
     <div class="col text-center">
-      <app-elenco></app-elenco>
+      <app-elenco
+        [contactList]="listaContatti"
+        (deleteContact)="onRemoveContact($event)"
+      ></app-elenco>
     </div>
     <div class="col">
       <app-dettagli></app-dettagli>

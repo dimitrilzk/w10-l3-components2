@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Contact } from 'src/app/classes/contact';
 
 @Component({
   selector: 'app-elenco',
@@ -7,19 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElencoComponent implements OnInit {
 
-  contatti = [
-    {
-    id: 1,
-    nome: "Mario",
-    cognome: "Rossi",
-    cellulare: 3471315321,
-    citta: "Milano"
-  }
-]
+  @Input() contactList?: Contact[];
+  @Output() deleteContact = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  removeContact(contact: Contact): void {
+    this.deleteContact.emit(contact);
   }
 
 }
