@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElencoComponent implements OnInit {
 
+  contatti = [
+    {
+    id: 1,
+    nome: "Mario",
+    cognome: "Rossi",
+    cellulare: 3471315321,
+    citta: "Milano"
+  }
+]
+
   constructor() { }
 
   ngOnInit(): void {
